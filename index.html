@@ -9,101 +9,101 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- AOS Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 
 <body>
-  <div class="shape"></div>
+  <div class="shape">
+    <!-- Astronaut GIF Container -->
+    <img src="./images/cat.gif" alt="Cat GIF" class="astronaut-gif">
+  </div>
+
   <header>
     <nav>
-      <h1>Anwesha Das</h1>
+      <h1></h1>
       <div class="burger">
         <i class="fa-solid fa-bars"></i>
       </div>
       <ul class="links">
-        <li><a href="#about">about</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#about" data-aos="fade-right">About</a></li>
+        <li><a href="#projects" data-aos="fade-left">Designs</a></li>
+        <li><a href="#contact" data-aos="fade-up">Contact</a></li>
+        <li><a href="#GitHub" data-aos="fade-down">GitHub</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <div class="container">
-      <div class="text">
+      <div class="text" data-aos="fade-up">
         <div class="grp">
-          <h2>Welcome to my profile</h2>
+          <h2>WELCOME TO MY PIXEL PARTY!</h2>
           <h1>
             Hi, I'm <span>Anwesha Das</span> <br />
-            A UI/UX Designer
+            A Web Developer & Graphic Designer
           </h1>
           <div class="icons">
             <a href="https://github.com/Aanwiie">
               <i class="fa-brands fa-github"></i>
             </a>
             <div class="line"></div>
-            <a
-              href="https://www.linkedin.com/in/anwesha-das-a063b6255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+            <a href="https://www.linkedin.com/in/anwesha-das-a063b6255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
           </div>
         </div>
       </div>
-      <div class="img">
+      <div class="img" data-aos="zoom-in">
         <img src="./images/apfp.png" alt="" />
+        <div class="glow-effect">Your Glowing Effect</div> <!-- This will be the glow under the image -->
       </div>
     </div>
   </main>
-  <!-- about section  -->
-  <div class="about" id="about">
+
+  <!-- About Section -->
+  <div class="about" id="about" data-aos="fade-right">
     <div class="container">
       <div class="text">
-        <h3>About</h3>
-        <h1>Get to know me</h1>
+        <h1>Who Am I?</h1>
         <p>
-          I’m a passionate UI/UX designer currently in my third year of pursuing a B.Tech in Computer Science. My love
-          for designing user-centric interfaces drives me to create intuitive and visually appealing digital
-          experiences. While design is my main focus, I also have a budding interest in Web3 and blockchain technology,
-          and I’m keen on exploring how these innovations can shape the future of digital design.
+          Software and Web developer by day, UI/UX designer by night. I'm a 3rd-year B.Tech Computer Science student, crafting smooth web experiences with JavaScript, React, and exploring Blockchain and Web3. I spend my spare time building analytic tools with C++.
         </p>
       </div>
-      <div class="skills">
-        <h2>Skills</h2>
-        <div class="wrapper">
-          <div>
-            <i class="fa-brands fa-html5"></i>
-          </div>
-          <div>
-            <i class="fa-brands fa-css3-alt"></i>
-          </div>
-
-          <div>
-            <i class="fa-brands fa-figma"></i>
-          </div>
-          <div>
-            <i class="fa-brands fa-github"></i>
-          </div>
-
-
-        </div>
+      <div class="gif-container">
+        <img src="./images/me-unscreen.gif" alt="Your GIF" class="gif">
       </div>
     </div>
   </div>
-  <!-- about section  -->
 
-  <!-- projects section -->
+  <!-- Skills Section -->
+  <div class="skills">
+    <h2>Skills</h2>
+    <div class="wrapper">
+      <div><i class="fa-brands fa-html5"></i></div>
+      <div><i class="fa-brands fa-css3-alt"></i></div>
+      <div><i class="fa-brands fa-figma"></i></div>
+      <div><i class="fa-brands fa-github"></i></div>
+      <div><i class="fa-brands fa-js-square"></i></div>
+      <div><i class="fa-brands fa-react"></i></div>
+      <div><i class="fa-brands fa-node"></i></div>
+      <div><i class="fa-solid fa-database"></i> <!-- SQL --></div>
+    </div>
+  </div>
 
-  <div class="projects" id="projects">
+  <!-- Projects Section -->
+  <div class="projects" id="projects" data-aos="fade-up">
     <div class="container">
-      <h3>Portfolio</h3>
-      <h1 class="title">A selection of Word I've done</h1>
+      <h1 class="title">Explore My Design Playground</h1>
       <div class="projects-wrapper">
-        <div class="project">
+        <!-- Add individual projects here -->
+        <div class="project" data-aos="flip-left">
           <div class="card">
             <div class="overview">
               <h1>Shopping Web UI/UX</h1>
               <div class="btns">
-                
-                <a href="https://www.figma.com/design/qrsHVhUZ3fk49S99djcNox/Untitled?node-id=0-1&t=rCjyXLLr9fw5ZeIB-1"
-                  target="_blank">
+                <a href="https://www.figma.com/design/qrsHVhUZ3fk49S99djcNox/Untitled?node-id=0-1&t=rCjyXLLr9fw5ZeIB-1" target="_blank">
                   <i class="fa-solid fa-link"></i>
                 </a>
               </div>
@@ -111,24 +111,20 @@
             <img src="./images/p1.png" alt="project 1" />
           </div>
         </div>
-
-        <div class="project">
+        <div class="project" data-aos="flip-left">
           <div class="card">
             <div class="overview">
               <h1>Cryp-tone, a NFT Music Marketplace</h1>
               <div class="btns">
-                
-                <a href="https://www.figma.com/design/O40oysSVImL9PwpyhlVgfO/Login-pages-v1----Carey-(Community)?node-id=0-1&t=DDw3X5K3p01BO7gr-1"
-                  target="_blank">
+                <a href="https://www.figma.com/design/O40oysSVImL9PwpyhlVgfO/Login-pages-v1----Carey-(Community)?node-id=0-1&t=DDw3X5K3p01BO7gr-1" target="_blank">
                   <i class="fa-solid fa-link"></i>
                 </a>
               </div>
             </div>
-            <img src="./images/p2.png" alt="moviesProject_img" />
+            <img src="./images/p2.png" alt="project 2" />
           </div>
         </div>
-
-        <div class="project">
+        <div class="project" data-aos="flip-left">
           <div class="card">
             <div class="overview">
               <h1>Style Art</h1>
@@ -138,47 +134,23 @@
                 </a>
               </div>
             </div>
-            <img src="./images/p3.jpeg" alt="weatherapp_img" />
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="card">
-            <div class="overview">
-              <h1>Donut MockUp</h1>
-              <div class="btns">
-                <a href="https://www.figma.com/design/GopALNQ4pF6faJWltLthHz/Untitled?node-id=1-2&t=vttj7y5IdG29Nigt-1" target="_blank">
-                  <i class="fa-solid fa-link"></i>
-                </a>
-              </div>
-            </div>
-            <img src="./images/image.png" alt="weatherapp_img" />
-          </div>
-        </div>
-        <div class="project">
-          <div class="card">
-            <div class="overview">
-              <h1>GDG Poster</h1>
-              <div class="btns">
-                <a href="https://www.figma.com/design/HVafCZBavYEnjC07JM2G4l/Orientation?node-id=0-1&t=IIiwzuW3LDYXpKvB-1">
-                  <i class="fa-solid fa-link"></i>
-                </a>
-              </div>
-            </div>
-            <img src="./images/google.png" alt="weatherapp_img" />
+            <img src="./images/p3.jpeg" alt="project 3" />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- projects section -->
+  <div class="rocket-container">
+    <img src="images/rocket.gif" alt="Rocket" class="rocket" />
+  </div>
+  
+  
+  
 
-  <!-- contact  -->
-
-  <div class="contact" id="contact">
+  <!-- Contact Section -->
+  <div class="contact" id="contact" data-aos="fade-up">
     <div class="container">
       <div class="header">
-        <h3>Contact</h3>
         <h1>Reach me out via:</h1>
       </div>
       <div class="wrapper">
@@ -204,11 +176,22 @@
     </div>
   </div>
 
-  <!-- contact  -->
+  <!-- Back to Top -->
   <a href="#" class="back-top">
     <i class="fa-solid fa-arrow-up"></i>
   </a>
+
+  <!-- AOS Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true      // Animation happens only once
+    });
+  </script>
+
+  <!-- Custom Script -->
+  <script src="./app.js"></script>
 </body>
-<script src="./app.js"></script>
 
 </html>

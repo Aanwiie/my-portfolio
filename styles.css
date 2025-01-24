@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 
 :root {
-  --primary: #e49559;
+  --primary: #07854E;
 }
 
 * {
@@ -17,23 +18,37 @@ html {
 
 body {
   min-height: 100vh;
-  background: #212121;
-  font-family: "Poppins", sans-serif;
-  color: white;
-  overflow-x: hidden;
+  background:  url('images/background.jpg') no-repeat center center fixed; /* Add background image */
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  font-family: 'Press Start 2P', cursive; /* Retro 8-bit font */
+  font-size: 16px; /* Set a base font size */
+  line-height: 1.6; /* Spacing between lines for readability */
+  color: white; /* Text color for contrast */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* triangle  */
+/* Shape Container */
 .shape {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 40%;
-  height: 100vh;
-  z-index: -1;
-  border-bottom: 100vh solid #3d3d3d;
-  border-left: 450px solid transparent;
+  left: 0; /* Position at the left side */
+  top: 20%; /* Move the GIF down */
+  width: auto;
+  height: auto;
+  z-index: -1; /* Keeps it in the background */
+  background-color: transparent; /* Ensure the background is transparent */
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align items to the left */
+  padding-top: 10px; /* Add some padding to avoid sticking to the very top */
 }
+
+/* Astronaut GIF */
+.astronaut-gif {
+  width: 200px; /* Increase size of the GIF */
+  height: auto; /* Maintain aspect ratio */
+  background-color: transparent; /* Ensure background is transparent */
+}
+
 
 header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -61,11 +76,12 @@ header nav ul {
 
 header nav a {
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* Added a valid value for text-decoration */
   font-size: 1.7rem;
   transition: 0.3s ease-in-out;
   position: relative;
 }
+
 
 header nav a:hover {
   color: var(--primary);
@@ -179,27 +195,38 @@ main .img img {
   width: 100%;
 }
 
-/* about section  */
-
+/* About Section Layout */
+/* About Section */
 .about {
   position: relative;
   display: flex;
   font-size: 2em;
   min-height: 100vh;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 2rem 0; /* Add padding around the section */
 }
 
 .about .container {
-  width: 70%;
-  margin: auto;
+  width: 85%; /* Adjust container width */
+  display: flex;
+  justify-content: center; /* Center text and gif inside container */
+  align-items: center;
+}
+
+.about .text {
+  flex: 1; /* Allow text to take up available space */
+  text-align: left; /* Align text to the left */
+  margin-right: 4rem; /* Space between text and GIF */
+  font-size: 1.2rem; /* Smaller font size for text */
+  max-width: 50%; /* Limit width to 50% of the container */
+  margin-left: auto;
+  margin-right: auto; /* Center text part within the container */
 }
 
 .about h1 {
-  font-size: 60px;
-  margin-bottom: 4rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-
-  position: relative;
+  font-size: 50px; /* Adjusted size */
+  margin-bottom: 2rem;
 }
 
 .about h1::after {
@@ -213,51 +240,97 @@ main .img img {
   border-radius: 1rem;
 }
 
-.about h3 {
-  font-size: 30px;
-  color: var(--primary);
-  font-weight: 200;
-  margin-bottom: -1rem;
-}
-
 .about p {
-  font-size: 25px;
+  font-size: 20px; /* Decreased text size */
   margin-bottom: 2rem;
-  width: 80%;
   color: #e6e6e6;
+  line-height: 1.5;
+  width: 90%; /* Limit width of text to prevent it from stretching too far */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.about .skills {
-  width: 70%;
+/* GIF Container */
+.gif-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align the GIF to the right */
+  margin-left: 3rem; /* Move the GIF slightly to the right */
+}
+
+.gif {
+  width: 500px; /* Keep GIF size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+/* Skills Section */
+.skills {
+  width: 80%;
   margin: 0 auto;
+  text-align: center;
 }
 
-.about .wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-
-.about .wrapper div {
-  font-size: 5vw;
+.skills h2 {
   color: white;
+  font-size: 50px;
+  margin-bottom: 2rem;
+}
 
-  padding: 3rem 2rem;
+/* Grid Layout for Skills Section */
+.skills .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 3rem;
+}
+
+/* Style for each skill icon */
+.skills .wrapper div {
+  font-size: 4rem;
+  color: white;
+  background: var(--primary);
+  border-radius: 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
 
+.skills .wrapper div:hover {
+  transform: scale(1.1);
+}
+
+/* Grid Layout for Skills Section */
+.skills .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+/* Style for each skill icon */
+.skills .wrapper div {
+  font-size: 4rem;
+  color: white;
+  background: var(--primary);
   border-radius: 1rem;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4) inset;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
-.about .skills h2 {
-  text-align: center;
-  color: var(--primary);
-  font-size: 50px;
+.skills .wrapper div:hover {
+  transform: scale(1.1);
 }
+
 
 /* about section  */
 
@@ -266,7 +339,7 @@ main .img img {
 .projects {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: rgb(247, 243, 243);
   padding: 3rem 0;
   margin: 0 auto;
 }
@@ -283,13 +356,21 @@ main .img img {
   margin-bottom: -1rem;
 }
 
-.projects h1.title {
-  font-size: 60px;
-  position: relative;
-  margin-bottom: 10rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+.title {
+  text-align: center; /* Centers the text horizontally */
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text stand out */
+  color: white; /* Choose an appropriate color */
+  margin-bottom: 1rem; /* Adds space below the title */
 }
+
+.projects-wrapper {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  flex-wrap: wrap; /* Allows content to wrap if necessary */
+  gap: 2rem;
+}
+
 
 .projects h1.title::after {
   content: "";
@@ -380,7 +461,7 @@ main .img img {
 
 .overview i {
   font-size: 3rem;
-  color: #222;
+  color: #f9f1f1;
 
   background: var(--primary);
   border-radius: 50%;
@@ -662,8 +743,58 @@ header nav .burger:hover i {
     font-size: 7vw;
   }
 
-  .about .skills h2 {
-    font-size: 8vw;
+  /* Skills Section */
+.skills {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center; /* Centering the entire section */
+}
+
+.skills h2 {
+  color: var(--primary);
+  font-size: 50px;
+  margin-bottom: 2rem;
+}
+
+/* Flexbox for equal two-line arrangement */
+.skills .wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 2rem;
+  justify-items: center; /* Center the items */
+  margin-top: 2rem;
+}
+
+/* Style for each skill icon */
+.skills .skill-icon {
+  font-size: 4rem;
+  color: white;
+  background: var(--primary);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.skills .skill-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 600px) {
+  .skills .wrapper {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+  }
+
+  .skills .skill-icon {
+    font-size: 3rem; /* Smaller icons on mobile */
+    padding: 1.5rem;
+  }
+}
+
   }
 
   .about .wrapper div {
@@ -697,7 +828,7 @@ header nav .burger:hover i {
   .contact .footer p {
     font-size: 6vw;
   }
-}
+
 
 @media only screen and (max-width: 550px) {
   main h1 {
